@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SRC = path.join(__dirname, 'src');
-const DIST = path.join(__dirname, 'dist');
+const DIST = __dirname;
 const LOGO = '<img src="./images/logo/logo.webp" alt="RNG Advocacia" class="h-10 w-auto">';
 
 function loadSection(name) {
@@ -59,4 +59,4 @@ html = resolveImages(html);
 
 fs.writeFileSync(path.join(DIST, 'index.html'), html, 'utf-8');
 
-console.log('Build concluido! -> dist/index.html');
+console.log('Build concluido! -> index.html');
